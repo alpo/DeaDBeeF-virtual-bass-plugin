@@ -1,0 +1,5 @@
+/Debug/
+*.so
+*.o
+.project
+.cproject
