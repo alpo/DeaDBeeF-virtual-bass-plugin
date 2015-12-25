@@ -9,19 +9,10 @@
 #include <assert.h>
 #include <deadbeef/deadbeef.h>
 
-enum {
-    VIRTUAL_BASS_PARAM_LEVEL,
-    VIRTUAL_BASS_PARAM_COUNT
-};
+#include "virtual_bass.h"
 
 static DB_functions_t *deadbeef;
 static DB_dsp_t plugin;
-
-typedef struct {
-    ddb_dsp_context_t ctx;
-    // instance-specific variables here
-    float level;  // this is example
-} ddb_virtual_bass_t;
 
 ddb_dsp_context_t *virtual_bass_open(void) {
     ddb_virtual_bass_t *virtual_bass = malloc(sizeof(ddb_virtual_bass_t));
